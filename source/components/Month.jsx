@@ -9,6 +9,20 @@ import style from './Month.scss';
 class Month extends React.Component {
     constructor(props) {
         super(props);
+
+        this.myRef = React.createRef();
+    }
+
+    componentDidMount() {
+        const now = new Date();
+
+        const {month} = this.props.month;
+
+        if (now.getMonth() + 1 === month) {
+            setTimeout(() => {
+                window.scrollTo(0, this.myRef.current.offsetTop);
+            }, 100);
+        }
     }
 
     render() {
@@ -16,7 +30,7 @@ class Month extends React.Component {
         const weekDayNr = [ 1, 2, 3, 4, 5, 6, 7 ];
 
         return (
-            <section className={style.Month}>
+            <section className={style.Month} ref={this.myRef}>
                 <h2>
                     {mod(month)}
                 </h2>
