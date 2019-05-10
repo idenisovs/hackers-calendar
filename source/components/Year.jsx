@@ -1,18 +1,20 @@
 import React from 'react';
 
+import mod from '../services/mod';
+
 import style from './Year.scss';
 
 class Year extends React.Component {
     constructor(props) {
         super(props);
-
-        this.calendar = props.calendar;
     }
 
     render() {
+        const {calendar} = this.props;
+
         return (
             <h1 className={style.Year}>
-                {this.calendar.year}
+                0x<span>{mod(calendar.year)}</span>
             </h1>
         );
     }

@@ -1,4 +1,8 @@
 .Year {
   color: gray;
   text-align: center;
+
+  & > span {
+    text-transform: uppercase;
+  }
 }

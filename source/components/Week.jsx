@@ -12,7 +12,7 @@ class Week extends React.Component {
                 {this.props.days.map((day, idx) => {
                     const key = `month[${month}][${idx}]`;
                     
-                    return (<Day key={key} day={day}/>);
+                    return (<Day key={key} date={day}/>);
                 })}
             </section>
         );

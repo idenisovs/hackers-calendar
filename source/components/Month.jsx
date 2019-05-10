@@ -1,8 +1,10 @@
 import React from 'react';
 
+import WeekDay from './WeekDay';
+import Week from './Week';
+import mod from '../services/mod';
+
 import style from './Month.scss';
-import WeekDay from "./WeekDay";
-import Week from "./Week";
 
 class Month extends React.Component {
     constructor(props) {
@@ -16,7 +18,7 @@ class Month extends React.Component {
         return (
             <section className={style.Month}>
                 <h2>
-                    {month}
+                    {mod(month)}
                 </h2>
                 <header>
                     {weekDayNr.map(dayNr => <WeekDay key={`weekday[${dayNr}]`} dayNr={dayNr} />)}

@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import mod from '../services/mod';
 
 import style from './WeekDay.scss';
 
@@ -18,7 +19,7 @@ class WeekDay extends React.Component {
 
         return (
             <span className={classNames(classes)}>
-                {dayNr}
+                {mod(dayNr, 3, 2)}
             </span>
         );
     }

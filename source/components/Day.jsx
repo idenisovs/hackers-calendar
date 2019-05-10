@@ -1,31 +1,32 @@
 import React from 'react';
 import classNames from 'classnames';
+import mod from '../services/mod';
 
 import style from './Day.scss';
 
 class Day extends React.Component {
     render() {
-        const {day} = this.props;
+        const {date} = this.props;
 
-        if (!day) {
+        if (!date) {
             return this.makePlaceholder();
         }
 
         const classes = {
-            [style.Workday]: (day.weekDay <= 5),
-            [style.Weekend]: (day.weekDay > 5)
+            [style.Workday]: (date.weekDay <= 5),
+            [style.Weekend]: (date.weekDay > 5)
         };
 
         return (
             <div className={classNames(classes)}>
-                {day.day}
+                {mod(date.day)}
             </div>
         );
     }
 
     makePlaceholder() {
         return (
-            <div className={style.Placeholder}></div>
+            <div className={style.Placeholder}> </div>
         );
     }
 }
