@@ -1,0 +1,10 @@
+@import './Day';
+
+.Workday {
+  @extend %day;
+  color: gray;
+}
+
+.Weekend {
+  @extend %day;
+}

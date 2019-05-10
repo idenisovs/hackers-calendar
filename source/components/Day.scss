@@ -1,0 +1,16 @@
+%day {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.Workday {
+  @extend %day;
+  color: black;
+}
+
+.Weekend {
+  @extend %day;
+  color: dodgerblue;
+}
