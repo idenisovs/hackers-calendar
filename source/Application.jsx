@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Calendar from './services/Calendar';
+import Calendar from './services/calendar/Calendar';
 import Year from './components/Year';
 import Month from './components/Month';
 
