@@ -1,10 +1,15 @@
 @import './Day';
 
-.Workday {
+%weekday {
   @extend %day;
+  font-size: 0.8em;
+}
+
+.Workday {
+  @extend %weekday;
   color: gray;
 }
 
 .Weekend {
-  @extend %day;
+  @extend %weekday;
 }

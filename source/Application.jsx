@@ -1,7 +1,8 @@
 import React from 'react';
-import Year from "./components/Year";
+
 import Calendar from './services/Calendar';
-import Month from "./components/Month";
+import Year from './components/Year';
+import Month from './components/Month';
 
 import style from './Application.scss';
 
@@ -10,6 +11,8 @@ class Application extends React.Component {
         super(props);
 
         this.calendar = new Calendar();
+
+        console.log(this.calendar);
     }
 
     render() {

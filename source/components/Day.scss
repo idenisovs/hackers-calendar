@@ -1,8 +1,7 @@
 %day {
   display: inline-block;
-  width: 1.5em;
+  width: 30px;
   text-align: center;
-  font-size: 0.8em;
 }
 
 .Workday {
@@ -13,4 +12,8 @@
 .Weekend {
   @extend %day;
   color: dodgerblue;
+}
+
+.Placeholder {
+  @extend %day;
 }

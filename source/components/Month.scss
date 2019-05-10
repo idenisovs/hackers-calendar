@@ -5,4 +5,8 @@
     color: orange;
     text-align: center;
   }
+
+  & > header {
+    margin-bottom: 0.5em;
+  }
 }

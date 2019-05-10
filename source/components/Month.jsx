@@ -1,8 +1,8 @@
 import React from 'react';
 
 import style from './Month.scss';
-import Day from "./Day";
 import WeekDay from "./WeekDay";
+import Week from "./Week";
 
 class Month extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class Month extends React.Component {
     }
 
     render() {
-        const {month} = this.props.month;
+        const {month, weeks} = this.props.month;
         const weekDayNr = [ 1, 2, 3, 4, 5, 6, 7 ];
 
         return (
@@ -21,6 +21,9 @@ class Month extends React.Component {
                 <header>
                     {weekDayNr.map(dayNr => <WeekDay key={`weekday[${dayNr}]`} dayNr={dayNr} />)}
                 </header>
+                <section>
+                    {weeks.map((week, idx) => <Week key={`month[${month}][${idx}]`} month={month} days={week} />)}
+                </section>
             </section>
         );
     }
