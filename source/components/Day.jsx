@@ -14,7 +14,8 @@ class Day extends React.Component {
 
         const classes = {
             [style.Workday]: (date.weekDay <= 5),
-            [style.Weekend]: (date.weekDay > 5)
+            [style.Weekend]: (date.weekDay > 5),
+            [style.Today]: date.isToday
         };
 
         return (
