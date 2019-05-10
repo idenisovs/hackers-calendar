@@ -1,0 +1,10 @@
+$gray: #2f2f2f;
+$smaller: 0.8em;
+
+@mixin field() {
+  background-color: $gray;
+  padding: 0.5em 0.5em;
+
+  font-family: Arial, sans-serif;
+  font-size: $smaller;
+}
