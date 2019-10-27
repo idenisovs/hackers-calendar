@@ -30,4 +30,18 @@
       text-align: left;
     }
   }
+
+  @media screen and (max-width: 490px){
+    justify-content: center;
+
+    & h1 {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      width: auto;
+    }
+
+    & h2 {
+      width: auto;
+    }
+  }
 }
