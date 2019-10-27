@@ -10,20 +10,30 @@ class Application extends React.Component {
     constructor(props) {
         super(props);
 
-        this.calendar = new Calendar();
+        const date = new Date();
 
-        console.log(this.calendar);
+        this.state = {
+            year: date.getFullYear()
+        };
     }
 
     render() {
+        const calendar = new Calendar(this.state.year);
+
         return (
             <div className={style['Application']}>
-                <Year calendar={this.calendar}/>
+                <Year calendar={calendar} onChange={this.onYearChanged.bind(this)}/>
                 <div className={style['Application__Calendar']}>
-                    {this.calendar.months.map((m, idx) => <Month key={`month[${idx}]`} month={m}/>)}
+                    {calendar.months.map((m, idx) => <Month key={`month[${idx}]`} month={m}/>)}
                 </div>
             </div>
         )
+    }
+
+    onYearChanged(year) {
+        this.setState({
+            year: year
+        });
     }
 }
 

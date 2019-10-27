@@ -1,7 +1,6 @@
 .Year {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: baseline;
   color: gray;
   text-align: center;
@@ -9,9 +8,19 @@
   & h1 {
     margin-left: 1em;
     margin-right: 1em;
+    width: 10%;
   }
 
   & h2 {
     font-size: 1em;
+    width: 45%;
+
+    &:first-child {
+      text-align: right;
+    }
+
+    &:last-child {
+      text-align: left;
+    }
   }
 }

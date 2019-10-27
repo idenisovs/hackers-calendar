@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import mod from '../services/mod';
 
 import style from './Year.scss';
+import SmallYear from "./SmallYear";
 
 class Year extends React.Component {
     constructor(props) {
@@ -11,21 +13,27 @@ class Year extends React.Component {
 
     render() {
         const {calendar} = this.props;
+        const changeYear = this.changeYear.bind(this);
 
         return (
             <header className={style.Year}>
-                <h2>
-                    0x{mod(calendar.year-1).toUpperCase()}
-                </h2>
+                <SmallYear year={calendar.year-1} onClick={changeYear}/>
                 <h1>
                     0x{mod(calendar.year).toUpperCase()}
                 </h1>
-                <h2>
-                    0x{mod(calendar.year+1).toUpperCase()}
-                </h2>
+                <SmallYear year={calendar.year+1} onClick={changeYear}/>
             </header>
         );
     }
+
+    changeYear(year) {
+        this.props.onChange(year);
+    }
 }
+
+Year.propTypes = {
+    calendar: PropTypes.object.isRequired,
+    onChange: PropTypes.func.isRequired
+};
 
 export default Year
