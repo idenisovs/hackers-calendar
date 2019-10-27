@@ -1,3 +1,11 @@
 .SmallYear {
   font-size: 1em;
+
+  &.clickable {
+    cursor: pointer;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 }

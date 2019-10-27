@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import SmallYear from './SmallYear';
 import mod from '../services/mod';
 
 import style from './Year.scss';
-import SmallYear from "./SmallYear";
 
 class Year extends React.Component {
     constructor(props) {
