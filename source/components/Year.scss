@@ -9,6 +9,13 @@
     margin-left: 1em;
     margin-right: 1em;
     width: 10%;
+
+    &.clickable {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
   }
 
   & h2 {
