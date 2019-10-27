@@ -13,9 +13,17 @@ class Year extends React.Component {
         const {calendar} = this.props;
 
         return (
-            <h1 className={style.Year}>
-                0x<span>{mod(calendar.year)}</span>
-            </h1>
+            <header className={style.Year}>
+                <h2>
+                    0x{mod(calendar.year-1).toUpperCase()}
+                </h2>
+                <h1>
+                    0x{mod(calendar.year).toUpperCase()}
+                </h1>
+                <h2>
+                    0x{mod(calendar.year+1).toUpperCase()}
+                </h2>
+            </header>
         );
     }
 }
