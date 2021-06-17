@@ -58,7 +58,7 @@ module.exports = (env, argv) => ({
 
 function getDevTool(argv) {
     if (argv.mode === 'production') {
-        return '';
+        return false;
     }
 
     return 'source-map';
